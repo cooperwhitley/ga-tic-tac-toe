@@ -1,0 +1,61 @@
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    height: 100vh;
+    margin: 0;
+    margin-bottom: 4vmin;
+    background-color: rgb(58, 58, 58);
+    color: white;
+}
+
+header {
+    font-size: 8vmin;
+    font-style: italic;
+    text-shadow: rgb(185, 139, 12) .3vmin .2vmin;
+}
+
+h2 {
+    letter-spacing: 2vmin;
+    text-shadow: rgb(185, 139, 12) .15vmin .1vmin;
+}
+
+h3 {
+    font-size: 3vmin;
+    letter-spacing: 2vmin;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, 19vmin);
+    grid-template-rows: repeat(3, 19vmin);
+    margin-top: 5vmin;
+    margin-bottom: 5vmin;
+}
+
+/* v board outlines v */
+.top {
+    border-bottom: .3vmin solid white;
+}
+
+.middle {
+    border-left: .3vmin solid white;
+    border-right: .3vmin solid white;
+}
+
+.bottom {
+    border-top: .3vmin solid white;
+}
+/* ^ board outlines ^ */
+
+button {
+    color: white;
+    border: none;
+    background: none;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 2vmin;
+    letter-spacing: 2vmin;
+}

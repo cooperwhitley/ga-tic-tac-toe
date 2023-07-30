@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--
+    adding font which can be accessed with:
+    font-family: 'Playfair Display', serif;
+    italic also included.
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <script defer src="js/main.js"></script>
+    <title>tic tac toe</title>
+</head>
+<body>
+    <header>TIC TAC TOE</header>
+    <h2>BY COOPER WHITLEY</h2>
+    <h3>Place O</h3>
+    
+    <!-- section for the game board -->
+    <section id="board">
+        <!-- row 2 -->
+        <div id="c0r2" class="top"></div>
+        <div id="c1r2" class="top middle"></div>
+        <div id="c2r2" class="top"></div>
+        <!-- row 1 -->
+        <div id="c0r1"></div>
+        <div id="c1r1" class="middle"></div>
+        <div id="c2r1"></div>
+        <!-- row 0 -->
+        <div id="c0r0" class="bottom"></div>
+        <div id="c1r0" class="bottom middle"></div>
+        <div id="c2r0" class="bottom"></div>
+    </section>
+    <!-- play again button -->
+    <div>
+        <button id="play-again">PLAY AGAIN</button>
+    </div>
+</body>
+</html>

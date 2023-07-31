@@ -6,7 +6,6 @@ body {
     font-weight: bold;
     height: 100vh;
     margin: 0;
-    margin-bottom: 4vmin;
     background-color: rgb(58, 58, 58);
     color: white;
 }
@@ -18,6 +17,7 @@ header {
 }
 
 h2 {
+    font-size: 2.5vmin;
     letter-spacing: 2vmin;
     text-shadow: rgb(185, 139, 12) .15vmin .1vmin;
 }
@@ -32,7 +32,7 @@ h3 {
     grid-template-columns: repeat(3, 19vmin);
     grid-template-rows: repeat(3, 19vmin);
     margin-top: 5vmin;
-    margin-bottom: 5vmin;
+    margin-bottom: 4vmin;
 }
 
 /* v board outlines v */
@@ -58,4 +58,12 @@ button {
     font-style: italic;
     font-size: 2vmin;
     letter-spacing: 2vmin;
+    padding: 1vmin;
+    transition: background 500ms ease, color 100ms ease;
+}
+
+button:hover {
+    color: rgb(185, 139, 12);
+    background-color: rgba(255, 255, 255, .1);
+    transition: background-color 200ms ease, color 100ms ease;
 }

@@ -39,6 +39,11 @@ h3 {
     letter-spacing: 2vmin;
 }
 
+#score {
+    margin-top: -2vmin;
+    margin-bottom: -1vmin;
+}
+
 #board {
     display: grid;
     grid-template-columns: repeat(3, 19vmin);

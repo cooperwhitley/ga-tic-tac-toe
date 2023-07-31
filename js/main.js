@@ -17,11 +17,13 @@ const boardIds = [
 let board;
 let turn;
 let winner;
+let score = [0, 0];
 
 /*--- cached elements ---*/
 
 const messageEl = document.getElementById('message');
 const playAgainButton = document.querySelector('button');
+const scoreBox = document.getElementById('score');
 
 /*--- functions ---*/
 
@@ -156,7 +158,12 @@ function getWinner(colIdx, rowIdx) {
     }
     if (winResult === null && checkTie() === 'T') {
         winResult = 'T';
+    } else if (winResult === -1) {
+        score[1] += 1;
+    } else if (winResult === 1) {
+        score[0] += 1;
     }
+    scoreBox.innerText = score[0] + ' - ' + score[1];
     return winResult;
 }
 

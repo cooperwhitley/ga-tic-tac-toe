@@ -133,6 +133,14 @@ function checkDiagonalWinnerNWSE(colIdx, rowIdx) {
     const adjCountSE = countAdjacent(colIdx, rowIdx, 1, -1);
     return adjCountNW + adjCountSE >= 2 ? board[colIdx][rowIdx] : null;
 }
+function checkTie() {
+    const row0 = !board[0].includes(0);
+    const row1 = !board[1].includes(0);
+    const row2 = !board[2].includes(0);
+    if (row0 && row1 && row2) {
+        return 'T'
+    }
+}
 
 function getWinner(colIdx, rowIdx) {
     let vert = checkVerticalWinner(colIdx, rowIdx);
@@ -145,6 +153,9 @@ function getWinner(colIdx, rowIdx) {
         if (winCondition !== null) {
             winResult = winCondition;
         }
+    }
+    if (winResult === null && checkTie() === 'T') {
+        winResult = 'T';
     }
     return winResult;
 }

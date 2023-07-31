@@ -50,6 +50,10 @@ h3 {
 }
 /* ^ board outlines ^ */
 
+#board > div {
+    font-family: 'Cousine', monospace;
+}
+
 button {
     color: white;
     border: none;

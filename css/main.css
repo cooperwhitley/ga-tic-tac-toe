@@ -22,8 +22,20 @@ h2 {
     text-shadow: rgb(185, 139, 12) .15vmin .1vmin;
 }
 
+a {
+    color: white;
+    text-decoration: none;
+    transition: color 100ms ease;
+}
+
+a:hover {
+    color:rgb(185, 139, 12);
+    transition: color 100ms ease;
+}
+
 h3 {
     font-size: 3vmin;
+    font-style: italic;
     letter-spacing: 2vmin;
 }
 
@@ -51,7 +63,19 @@ h3 {
 /* ^ board outlines ^ */
 
 #board > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: 'Cousine', monospace;
+    text-align: center;
+    font-size: 10vmin;
+    background: none;
+    transition: background 100ms ease;
+}
+
+#board > div:hover {
+    background-color: rgba(255, 255, 255, .1);
+    transition: background-color 100ms ease;
 }
 
 button {

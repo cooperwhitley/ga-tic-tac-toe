@@ -27,6 +27,8 @@ As a user...
 - Font: Playfair Display Bold
 - colors: black, white, gold
 
+# <img alt="tic-tac-toe demo" src="https://i.imgur.com/75f0Z5l.png">
+
 ```html
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

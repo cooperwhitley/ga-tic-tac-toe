@@ -110,8 +110,6 @@ function countAdjacent(colIdx, rowIdx, colOffset, rowOffset) {
         colIdx += colOffset
         rowIdx += rowOffset
     }
-
-    console.log(count);
     return count
 }
 
@@ -125,17 +123,30 @@ function checkHorizontalWinner(colIdx, rowIdx) {
     const adjCountRight = countAdjacent(colIdx, rowIdx, 1, 0)
     return adjCountLeft + adjCountRight >= 2 ? board[colIdx][rowIdx] : null
 }
+function checkDiagonalWinnerNESW(colIdx, rowIdx) {
+    const adjCountNE = countAdjacent(colIdx, rowIdx, 1, 1);
+    const adjCountSW = countAdjacent(colIdx, rowIdx, -1, -1);
+    return adjCountNE + adjCountSW >= 2 ? board[colIdx][rowIdx] : null;
+}
+function checkDiagonalWinnerNWSE(colIdx, rowIdx) {
+    const adjCountNW = countAdjacent(colIdx, rowIdx, -1, 1);
+    const adjCountSE = countAdjacent(colIdx, rowIdx, 1, -1);
+    return adjCountNW + adjCountSE >= 2 ? board[colIdx][rowIdx] : null;
+}
 
 function getWinner(colIdx, rowIdx) {
     let vert = checkVerticalWinner(colIdx, rowIdx);
     let hori = checkHorizontalWinner(colIdx, rowIdx);
-    if (vert !== null) {
-        return vert;
-    } else if (hori !== null) {
-        return hori;
-    } else {
-        return null;
+    let nesw = checkDiagonalWinnerNESW(colIdx, rowIdx);
+    let nwse = checkDiagonalWinnerNWSE(colIdx, rowIdx);
+    let winConditionsArray = [vert, hori, nesw, nwse];
+    let winResult = null;
+    for (let winCondition of winConditionsArray) {
+        if (winCondition !== null) {
+            winResult = winCondition;
+        }
     }
+    return winResult;
 }
 
 /*--- event listeners ---*/
